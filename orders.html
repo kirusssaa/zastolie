@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои заявки | Застолье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <header class="header">
+    <a class="header__logo" href="index.html">Застолье</a>
+    <nav class="header__nav">
+      <a class="header__link" href="index.html">Главная</a>
+      <a class="header__link" href="register.html">Регистрация</a>
+      <a class="header__link" href="login.html">Вход</a>
+      <a class="header__link header__link--active" href="orders.html">Мои заявки</a>
+      <a class="header__link" href="create.html">Новая заявка</a>
+      <a class="header__link" href="admin.html">Администратор</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="orders">
+      <div class="orders__head">
+        <h1 class="orders__title">Мои заявки</h1>
+        <a class="button" href="create.html">Новая заявка</a>
+      </div>
+      <div class="orders__list" id="orders-list"></div>
+      <p class="message" id="orders-empty">У вас пока нет заявок.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">Застолье — премиальный обеды</p>
+    <p class="footer__text">+7(383)-200-20-20 · info@haihana.ru</p>
+    <p class="footer__text">© 2026</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

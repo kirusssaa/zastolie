@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новая заявка | Застолье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <header class="header">
+    <a class="header__logo" href="index.html">Застолье</a>
+    <nav class="header__nav">
+      <a class="header__link" href="index.html">Главная</a>
+      <a class="header__link" href="register.html">Регистрация</a>
+      <a class="header__link" href="login.html">Вход</a>
+      <a class="header__link" href="orders.html">Мои заявки</a>
+      <a class="header__link header__link--active" href="create.html">Новая заявка</a>
+      <a class="header__link" href="admin.html">Администратор</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="auth">
+      <h1 class="auth__title">Новая заявка</h1>
+      <form class="form" id="create-form" method="post" action="">
+        <div class="form__group">
+          <label class="form__label" for="fio">ФИО</label>
+          <input class="form__input" type="text" id="fio" name="fio" placeholder="Маймыр Приорар Мамбекович" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="phone">Телефон</label>
+          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7(000)-000-00-6767" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="hall">Тип помещения</label>
+          <select class="form__input" id="hall" name="hall" required>
+            <option value="">Выберите помещение</option>
+            <option value="Большой зал">Большой зал</option>
+            <option value="Малый зал">Малый зал</option>
+            <option value="Отдельный кабинет">Отдельный кабинет</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="occasion">Повод</label>
+          <select class="form__input" id="occasion" name="occasion" required>
+            <option value="">Выберите повод</option>
+            <option value="День рождения">День рождения</option>
+            <option value="9 дней">9 дней до покупки приоры</option>
+            <option value="40 дней">40 дней до свадьбы</option>
+            <option value="Годовщина">Годовщина</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="date">Дата обеда</label>
+          <input class="form__input" type="date" id="date" name="date" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="time">Время начала</label>
+          <input class="form__input" type="time" id="time" name="time" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="guests">Количество гостей</label>
+          <input class="form__input" type="number" id="guests" name="guests" placeholder="20" min="1" max="100" required>
+        <p class="form__hint">От 1 до 100 человек</p>
+        </div>
+        <fieldset class="form__group form__fieldset">
+          <legend class="form__label">Способ оплаты</legend>
+          <label class="form__option"><input type="radio" name="payment" value="Наличные" required> Наличные</label>
+          <label class="form__option"><input type="radio" name="payment" value="Банковская карта"> Банковская карта</label>
+        </fieldset>
+        <button class="button form__submit" type="submit">Отправить заявку</button>
+      </form>
+      <p class="auth__link"><a href="orders.html">Назад к моим заявкам</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">Застолье — премиальный обеды</p>
+    <p class="footer__text">+7(383)-200-20-20 · info@haihana.ru</p>
+    <p class="footer__text">© 2026</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

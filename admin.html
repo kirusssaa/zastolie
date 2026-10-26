@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель администратора | Застолье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <header class="header">
+    <a class="header__logo" href="index.html">Застолье</a>
+    <nav class="header__nav">
+      <a class="header__link" href="index.html">Главная</a>
+      <a class="header__link" href="register.html">Регистрация</a>
+      <a class="header__link" href="login.html">Вход</a>
+      <a class="header__link" href="orders.html">Мои заявки</a>
+      <a class="header__link" href="create.html">Новая заявка</a>
+      <a class="header__link header__link--active" href="admin.html">Администратор</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="admin">
+      <h1 class="admin__title">Все заявки</h1>
+      <form class="form filter" id="filter-form" method="post" action="">
+        <label class="form__label" for="filter">Статус</label>
+        <select class="form__input filter__select" id="filter" name="filter">
+          <option value="all">Все статусы</option>
+          <option value="new">Новая</option>
+          <option value="work">Обед назначен</option>
+          <option value="done">Обед проведён</option>
+          <option value="cancel">Отменена</option>
+        </select>
+        <button class="button" type="submit">Показать</button>
+      </form>
+      <div class="admin__scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="table__head">№</th>
+              <th class="table__head">ФИО клиента</th>
+              <th class="table__head">Телефон</th>
+              <th class="table__head">Помещение</th>
+              <th class="table__head">Повод</th>
+              <th class="table__head">Дата</th>
+              <th class="table__head">Время</th>
+              <th class="table__head">Гостей</th>
+              <th class="table__head">Оплата</th>
+              <th class="table__head">Статус</th>
+              <th class="table__head">Смена статуса</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table"></tbody>
+        </table>
+      </div>
+      <p class="message" id="admin-empty">Заявок пока нет.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">Застолье — премиальный обеды</p>
+    <p class="footer__text">+7(383)-200-20-20 · info@сhaihana.ru</p>
+    <p class="footer__text">© 2026</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
